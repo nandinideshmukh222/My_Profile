@@ -85,6 +85,12 @@
         margin-bottom: 10px;
         font-weight: bolder;
       }
+      #listSummary li{
+        list-style-type: none;
+      }
+      #listSummary li::marker{
+        content: "✍️";
+      }
       
 .copt-text{
   font-weight: bolder;
@@ -95,16 +101,24 @@
   
   .list-text
    {  font-family: "Poppins", sans-serif;
+   list-style-type: lower-alpha;
 
     }
-    #roles-text{
+    #roles-text li{
+      list-style-type: lower-alpha;
       font-family: "Poppins", sans-serif;
+      padding-top: 0.5px;
 
   
     }
     #nav-text{
       font-family: "Roboto", sans-serif;
-
+    #listSummary li{
+        list-style-type: circle;
+      }
+    #projectDesc::selection{
+      background-color: rgb(241, 193, 104);
+    }
     }
     </style>
   </head>
@@ -138,7 +152,7 @@ fa-user fa-lg" aria-hidden="true"></i>
 <!-- HOME Section -->
 <section id="home">
   <h2 style="color: brown; font-style: italic;"">  Professional Summary </h2>
-  <ul class="list-text">
+  <ol class="list-text">
     <li>
       Having 1 year of experience in developing Single page Web
       Application using Angular
@@ -162,7 +176,7 @@ fa-user fa-lg" aria-hidden="true"></i>
     </li>
     <li>Knowledge of NodeJS</li>
     <li id="li">Ability to work with people at all levels in the program</li>
-  </ul>
+  </ol>
     <hr>
       <!-- Technology stack section -->
       <section id="techStack">
@@ -214,7 +228,7 @@ fa-user fa-lg" aria-hidden="true"></i>
           </p>
           <strong>Team Size</strong>:06  <strong>Duration</strong>:2021- 1<sup>st</sup>-July till <u><i>present</i></u>
           <p>
-              <strong>Praoject Description</strong>:This project is mainly used for student management in colleges,where it helps to manage student record like <br>
+              <strong id="projectDesc">Project Description</strong>:This project is mainly used for student management in colleges,where it helps to manage student record like <br>
            student registration student update and to see all the list of acadamic like score card and attendances 
            </p>
            <hr>
